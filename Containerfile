@@ -1,7 +1,7 @@
 FROM scratch AS ctx
 COPY build_files /
 
-FROM quay.io/fedora/fedora-coreos:42.20250422.20.0
+FROM quay.io/fedora/fedora-coreos:43.20250421.91.0@sha256:c1f51959fe50ab966a1325b9024a50ba519aebe4c3677fcbae3fdd2e74b5874a
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
