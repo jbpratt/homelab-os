@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-cat <<EOF | tee /etc/yum.repos.d/kubernetes.repo
+tee /etc/yum.repos.d/kubernetes.repo <<EOF
 [kubernetes]
 name=Kubernetes
 baseurl=https://pkgs.k8s.io/core:/stable:/v1.33/rpm/
